@@ -13,15 +13,6 @@ namespace DirectoryBrowser.Controllers
 {
     public class HomeController : Controller
     {
-        //
-        // GET: /Home/
-
-        //private static IList<Comment> comments = new List<Comment>
-        //{  
-        //    new Comment { Text = "hi there", Id = Guid.NewGuid() },
-        //    new Comment { Text = "hello", Id = Guid.NewGuid() }
-        //};
-
        
         List<ListItem> files = new List<ListItem>();
         DataTable dt = new DataTable();
@@ -50,27 +41,6 @@ namespace DirectoryBrowser.Controllers
         {
             return View();
         }
-
-        //[HttpPost]
-        //public ActionResult AddComment(CommentInput input)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(input);
-        //    }
-
-        //    files.Add(new Comment { Text = input.Text, Id = Guid.NewGuid() });
-
-        //    return RedirectToAction("Comments");
-        //}
-
-        //[HttpPost]
-        //public ActionResult Delete(Guid id)
-        //{
-        //    comments.Remove(comments.SingleOrDefault(o => o.Id == id));
-
-        //    return RedirectToAction("Comments");
-        //}
 
     }
 
