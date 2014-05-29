@@ -1,0 +1,66 @@
+﻿@model ICollection<System.IO.FileInfo> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Directory Browser</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="/assets/stylesheets/styles.css" rel="stylesheet" />
+    <link href="/assets/stylesheets/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h1>Search Directory</h1>
+            @{
+                using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                {
+                    <div class="input-group">
+                        @Html.TextBox("keywords", "", new { Class="form-control" })
+                        <span class="input-group-btn">
+                            <input type="submit" value="Search" class="btn btn-default" />
+                        </span>
+                    </div>
+                }
+            }  
+
+        </div>
+        
+        <table class="table table-bordered">
+            <tr>
+                <th>File</th>
+                <th>Date Created</th>
+            </tr>
+            <!-- if there are no records, show a blank row -->
+            @{
+                if (Model.Count == 0) {
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                }
+            }
+            <!-- If there are some records, print them to the screen -->
+            @{
+                foreach(var filePath in Model)
+                {
+                    <tr>
+                        <td><i class="fa fa-file"></i> <a href="@filePath.Name">@filePath.Name</a></td>
+                        <td>@filePath.CreationTime</td>
+                    </tr>
+                }
+            }
+        </table>
+             
+        
+        
+    </div>
+</body>
+</html>

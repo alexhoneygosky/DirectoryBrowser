@@ -1,0 +1,23 @@
+﻿@*@model DirectoryBrowser.Controllers.CommentInput
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddComment</title>
+</head>
+<body>
+    <div>
+      @{
+          using (Html.BeginForm())
+          {
+              @Html.LabelFor(o => o.Text)
+              @Html.TextAreaFor(o => o.Text)
+              @Html.ValidationMessageFor(o => o.Text)
+              <input type="submit" value="add new comment"/>
+          }
+      }  
+    </div>
+</body>
+</html>*@

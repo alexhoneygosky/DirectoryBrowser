@@ -1,0 +1,24 @@
+﻿@*@model IEnumerable<DirectoryBrowser.Controllers.Comment>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Comments</title>
+</head>
+<body>
+    <h2>Comments</h2>
+    @Html.ActionLink("Add new comment", "AddComment")
+    <div>
+        <ul>
+            @{
+                foreach(var comment in Model)
+                {
+                    <li>@comment.Text | <form action="@Url.Action("Delete", new { Id = @comment.Id })" method="post"><input type="submit" value="delete"/></form></li>
+                }
+             }
+        </ul>
+    </div>
+</body>
+</html>*@
