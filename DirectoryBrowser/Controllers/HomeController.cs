@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 using System.Data;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 
@@ -13,13 +15,14 @@ namespace DirectoryBrowser.Controllers
 {
     public class HomeController : Controller
     {
-       
+      
         List<ListItem> files = new List<ListItem>();
         DataTable dt = new DataTable();
 
         public ActionResult Index(string keywords)
         {
-            var filePaths = new ArrayList(Directory.GetFiles(@"..\\Test", keywords+"*", SearchOption.AllDirectories));
+            string pathString = WebConfigurationManager.AppSettings["directorypath"];
+            var filePaths = new ArrayList(Directory.GetFiles(@pathString, "*"+keywords+"*", SearchOption.AllDirectories));
  
             List<FileInfo> fileCollection = new List<FileInfo>();
             
@@ -41,6 +44,27 @@ namespace DirectoryBrowser.Controllers
         {
             return View();
         }
+
+        //[HttpPost]
+        //public ActionResult AddComment(CommentInput input)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(input);
+        //    }
+
+        //    files.Add(new Comment { Text = input.Text, Id = Guid.NewGuid() });
+
+        //    return RedirectToAction("Comments");
+        //}
+
+        //[HttpPost]
+        //public ActionResult Delete(Guid id)
+        //{
+        //    comments.Remove(comments.SingleOrDefault(o => o.Id == id));
+
+        //    return RedirectToAction("Comments");
+        //}
 
     }
 
