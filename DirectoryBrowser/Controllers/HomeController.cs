@@ -45,27 +45,6 @@ namespace DirectoryBrowser.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public ActionResult AddComment(CommentInput input)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(input);
-        //    }
-
-        //    files.Add(new Comment { Text = input.Text, Id = Guid.NewGuid() });
-
-        //    return RedirectToAction("Comments");
-        //}
-
-        //[HttpPost]
-        //public ActionResult Delete(Guid id)
-        //{
-        //    comments.Remove(comments.SingleOrDefault(o => o.Id == id));
-
-        //    return RedirectToAction("Comments");
-        //}
-
     }
 
     public class SearchCriteria
@@ -73,28 +52,4 @@ namespace DirectoryBrowser.Controllers
         public string Keywords { get; set; }
     }
 
-    public class File
-    {
-        public string Name { get; set; }
-        public string Path { get; set; }
-    }
-
-    public class Foo
-    {
-        public string Name { get; set; }
-
-        public int Quantity { get; set; }
-    }
-
-    public class Comment
-    {
-        public Guid Id { get; set; }
-        public string Text { get; set; }
-    }
-
-    public class CommentInput
-    {
-        [Required]
-        public string Text { get; set; }
-    }
 }
