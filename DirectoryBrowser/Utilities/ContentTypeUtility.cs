@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -10,12 +12,12 @@ namespace DirectoryBrowser.Utilities
 
         public static string GetMimeTypeFromFilename(string fileName)
         {
-            var extension = fileName;
+            var extension = Path.GetExtension(fileName);
 
             return GetMimeType(extension);
         }
-        
-        
+
+
         public static string GetMimeType(string extension)
         {
             if (extension == null)
@@ -32,7 +34,7 @@ namespace DirectoryBrowser.Utilities
 
             return _mappings.TryGetValue(extension, out mime) ? mime : "application/octet-stream";
         }
-        
+
         private static IDictionary<string, string> _mappings = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase) {
 
             #region Big freaking list of mime types
@@ -602,4 +604,4 @@ namespace DirectoryBrowser.Utilities
 
         };
     }
-}
+} 
