@@ -1,4 +1,4 @@
-﻿@model ICollection<System.IO.FileInfo> 
+﻿@model ICollection<DirectoryBrowser.Controllers.File> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +11,9 @@
     <title>Directory Browser</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet">
-    <link href="/assets/stylesheets/styles.css" rel="stylesheet" />
-    <link href="/assets/stylesheets/font-awesome.css" rel="stylesheet" />
+    <link href="./assets/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="./assets/stylesheets/styles.css" rel="stylesheet" />
+    <link href="./assets/stylesheets/font-awesome.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -52,7 +52,7 @@
                 foreach(var filePath in Model)
                 {
                     <tr>
-                        <td><i class="fa fa-file"></i> <a href="@filePath.Name">@filePath.Name</a></td>
+                        <td><i class="fa fa-file"></i> <a href="./download?file=@filePath.Path">@filePath.Name</a></td>
                         <td>@filePath.CreationTime</td>
                     </tr>
                 }
