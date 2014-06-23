@@ -49,3 +49,4 @@ C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.Razor.xml
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.dll
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.pdb
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.csprojResolveAssemblyReference.cache
