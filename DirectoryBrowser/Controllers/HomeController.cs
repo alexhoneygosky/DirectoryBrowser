@@ -39,11 +39,8 @@ namespace DirectoryBrowser.Controllers
 
         public FilePathResult Download(string file)
         {
-            var decodedFile = HttpUtility.UrlDecode(file);
-            string pathString = WebConfigurationManager.AppSettings["directorypath"];
-
-            string fullPath = pathString + decodedFile;
-
+            var decodedFile = HttpUtility.UrlDecode(file).TrimStart(new char[]{ '\\' });
+            string fullPath = Path.Combine(WebConfigurationManager.AppSettings["directorypath"], decodedFile);
             FileInfo fileInfo = new FileInfo(fullPath);
             string contentType = ContentTypeUtility.GetMimeTypeFromFilename(fileInfo.Name);
 
