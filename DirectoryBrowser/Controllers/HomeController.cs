@@ -28,7 +28,7 @@ namespace DirectoryBrowser.Controllers
                 {
                     FileInfo fileInfo = new FileInfo(filePath);
 
-                    var file = new File(fileInfo.Name, HttpUtility.UrlEncode(fileInfo.FullName), fileInfo.CreationTime);
+                    var file = new File(fileInfo.Name, fileInfo.FullName, fileInfo.CreationTime);
 
                     fileCollection.Add(file);
                 }
@@ -39,9 +39,11 @@ namespace DirectoryBrowser.Controllers
 
         public FilePathResult Download(string file)
         {
+            var decodedFile = HttpUtility.UrlDecode(file);
             string pathString = WebConfigurationManager.AppSettings["directorypath"];
-            string fullPath = file;
-            HttpUtility.UrlDecode(fullPath);
+
+            string fullPath = pathString + decodedFile;
+
             FileInfo fileInfo = new FileInfo(fullPath);
             string contentType = ContentTypeUtility.GetMimeTypeFromFilename(fileInfo.Name);
 
@@ -70,7 +72,7 @@ namespace DirectoryBrowser.Controllers
         {
             get
             {
-                return FilePath.Replace(WebConfigurationManager.AppSettings["directorypath"], "");
+                return HttpUtility.UrlEncode(FilePath.Replace(WebConfigurationManager.AppSettings["directorypath"], ""));
             }
         }
 
