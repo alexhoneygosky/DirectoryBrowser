@@ -24,3 +24,29 @@ c:\users\alex.honeygosky\documents\visual studio 2012\Projects\DirectoryBrowser\
 c:\users\alex.honeygosky\documents\visual studio 2012\Projects\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.csprojResolveAssemblyReference.cache
 c:\users\alex.honeygosky\documents\visual studio 2012\Projects\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.dll
 c:\users\alex.honeygosky\documents\visual studio 2012\Projects\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.pdb
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\DirectoryBrowser.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\DirectoryBrowser.pdb
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\Newtonsoft.Json.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Net.Http.Formatting.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Helpers.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.WebHost.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Mvc.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Razor.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.Deployment.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.Razor.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\Newtonsoft.Json.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Net.Http.Formatting.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Helpers.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.WebHost.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Mvc.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Razor.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.Deployment.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.Razor.xml
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.pdb
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.csprojResolveAssemblyReference.cache
