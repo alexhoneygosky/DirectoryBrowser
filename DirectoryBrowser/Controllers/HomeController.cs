@@ -14,25 +14,15 @@ namespace DirectoryBrowser.Controllers
 {
     public class HomeController : Controller
     {
-      
-        List<ListItem> files = new List<ListItem>();
-        DataTable dt = new DataTable();
-
         public ActionResult Index(string keywords)
         {
             string pathString = WebConfigurationManager.AppSettings["directorypath"];
-            var filePaths = Directory.EnumerateFiles(@pathString, "*"+keywords+"*", SearchOption.AllDirectories);
- 
+
             List<File> fileCollection = new List<File>();
 
-            if (String.IsNullOrEmpty(keywords))
+            if (!String.IsNullOrEmpty(keywords))
             {
-                fileCollection.Clear();
-                return View(fileCollection);
-            }
-
-            else
-            {
+                var filePaths = Directory.EnumerateFiles(@pathString, "*" + keywords + "*", SearchOption.AllDirectories);
 
                 foreach (string filePath in filePaths)
                 {
@@ -42,9 +32,9 @@ namespace DirectoryBrowser.Controllers
 
                     fileCollection.Add(file);
                 }
-
-                return View(fileCollection);
             }
+
+            return View(fileCollection);
         }
 
         public FilePathResult Download(string file)
