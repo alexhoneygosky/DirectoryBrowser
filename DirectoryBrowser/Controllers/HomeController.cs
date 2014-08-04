@@ -30,10 +30,14 @@ namespace DirectoryBrowser.Controllers
                 JavaScriptSerializer JS = new JavaScriptSerializer();
                 JS.Serialize(fileCollection);
 
+<<<<<<< HEAD
                 return Json(fileCollection, JsonRequestBehavior.AllowGet);
             }
 
             var filePaths = Directory.EnumerateFiles(@pathString, "*" + keywords + "*", SearchOption.AllDirectories);
+=======
+                    var file = new File(fileInfo.Name, fileInfo.FullName, fileInfo.CreationTime);
+>>>>>>> upstream/master
 
             foreach (string filePath in filePaths)
             {
@@ -50,9 +54,8 @@ namespace DirectoryBrowser.Controllers
 
         public FilePathResult Download(string file)
         {
-            string pathString = WebConfigurationManager.AppSettings["directorypath"];
-            string fullPath = file;
-            HttpUtility.UrlDecode(fullPath);
+            var decodedFile = HttpUtility.UrlDecode(file).TrimStart(new char[]{ '\\' });
+            string fullPath = Path.Combine(WebConfigurationManager.AppSettings["directorypath"], decodedFile);
             FileInfo fileInfo = new FileInfo(fullPath);
             string contentType = ContentTypeUtility.GetMimeTypeFromFilename(fileInfo.Name);
 
@@ -77,6 +80,7 @@ namespace DirectoryBrowser.Controllers
         public string FilePath { get; set; }
         public string CreationTime { get; set; }
 
+<<<<<<< HEAD
         //public string Path 
         //{
         //    get
@@ -84,6 +88,15 @@ namespace DirectoryBrowser.Controllers
         //        return FilePath.Replace(WebConfigurationManager.AppSettings["directorypath"], "");
         //    }
         //}
+=======
+        public string Path 
+        {
+            get
+            {
+                return HttpUtility.UrlEncode(FilePath.Replace(WebConfigurationManager.AppSettings["directorypath"], ""));
+            }
+        }
+>>>>>>> upstream/master
 
         public File(string name, string filePath, string creationTime)
         {

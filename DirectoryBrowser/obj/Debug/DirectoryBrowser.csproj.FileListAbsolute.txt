@@ -50,6 +50,35 @@ C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.dll
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.pdb
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Cors.dll
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.Cors.dll
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.Cors.xml
+=======
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\DirectoryBrowser.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\DirectoryBrowser.pdb
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\Microsoft.Web.Infrastructure.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\Newtonsoft.Json.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Net.Http.Formatting.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Helpers.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.WebHost.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Mvc.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Razor.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.Deployment.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.Razor.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\Newtonsoft.Json.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Net.Http.Formatting.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Helpers.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.WebHost.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Mvc.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Razor.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.Deployment.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.WebPages.Razor.xml
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.csprojResolveAssemblyReference.cache
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.dll
+C:\Development\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.pdb
+>>>>>>> upstream/master
