@@ -1,5 +1,6 @@
 ﻿using DirectoryBrowser.Utilities;
 using Microsoft.Win32;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,10 +9,13 @@ using System.IO;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using System.Web.UI.WebControls;
+using System.Web.Http.Cors;
  
 namespace DirectoryBrowser.Controllers
 {
+    //[EnableCors(origins: "*", headers: "*", methods: "*", SupportsCredentials=true)]
     public class HomeController : Controller
     {
         public ActionResult Index(string keywords)
@@ -20,21 +24,28 @@ namespace DirectoryBrowser.Controllers
 
             List<File> fileCollection = new List<File>();
 
-            if (!String.IsNullOrEmpty(keywords))
+            if (String.IsNullOrEmpty(keywords))
             {
-                var filePaths = Directory.EnumerateFiles(@pathString, "*" + keywords + "*", SearchOption.AllDirectories);
 
-                foreach (string filePath in filePaths)
-                {
-                    FileInfo fileInfo = new FileInfo(filePath);
+                JavaScriptSerializer JS = new JavaScriptSerializer();
+                JS.Serialize(fileCollection);
 
-                    var file = new File(fileInfo.Name, HttpUtility.UrlEncode(fileInfo.FullName), fileInfo.CreationTime);
-
-                    fileCollection.Add(file);
-                }
+                return Json(fileCollection, JsonRequestBehavior.AllowGet);
             }
 
-            return View(fileCollection);
+            var filePaths = Directory.EnumerateFiles(@pathString, "*" + keywords + "*", SearchOption.AllDirectories);
+
+            foreach (string filePath in filePaths)
+            {
+                FileInfo fileInfo = new FileInfo(filePath);
+                var file = new File(fileInfo.Name, HttpUtility.UrlEncode(fileInfo.FullName), fileInfo.CreationTime.ToString());
+                fileCollection.Add(file);
+            }
+
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            js.Serialize(fileCollection);
+
+            return Json(fileCollection, JsonRequestBehavior.AllowGet);
         }
 
         public FilePathResult Download(string file)
@@ -64,17 +75,17 @@ namespace DirectoryBrowser.Controllers
     {
         public string Name { get; set; }
         public string FilePath { get; set; }
-        public DateTime CreationTime { get; set; }
+        public string CreationTime { get; set; }
 
-        public string Path 
-        {
-            get
-            {
-                return FilePath.Replace(WebConfigurationManager.AppSettings["directorypath"], "");
-            }
-        }
+        //public string Path 
+        //{
+        //    get
+        //    {
+        //        return FilePath.Replace(WebConfigurationManager.AppSettings["directorypath"], "");
+        //    }
+        //}
 
-        public File(string name, string filePath, DateTime creationTime)
+        public File(string name, string filePath, string creationTime)
         {
             Name = name;
             FilePath = filePath;

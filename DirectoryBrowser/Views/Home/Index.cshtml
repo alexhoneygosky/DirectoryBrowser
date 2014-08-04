@@ -52,7 +52,7 @@
                 foreach(var filePath in Model)
                 {
                     <tr>
-                        <td><i class="fa fa-file"></i> <a href="./download?file=@filePath.Path">@filePath.Name</a></td>
+                        <td><i class="fa fa-file"></i> <a href="./download?file=@filePath.FilePath">@filePath.Name</a></td>
                         <td>@filePath.CreationTime</td>
                     </tr>
                 }

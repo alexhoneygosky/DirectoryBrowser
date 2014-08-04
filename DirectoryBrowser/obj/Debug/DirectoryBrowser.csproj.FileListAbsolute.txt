@@ -50,3 +50,6 @@ C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.dll
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.pdb
 C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\obj\Debug\DirectoryBrowser.csprojResolveAssemblyReference.cache
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Cors.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.Cors.dll
+C:\Users\alex.honeygosky\Documents\GitHub\DirectoryBrowser\DirectoryBrowser\bin\System.Web.Http.Cors.xml
