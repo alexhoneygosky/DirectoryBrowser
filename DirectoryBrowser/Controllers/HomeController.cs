@@ -30,14 +30,10 @@ namespace DirectoryBrowser.Controllers
                 JavaScriptSerializer JS = new JavaScriptSerializer();
                 JS.Serialize(fileCollection);
 
-<<<<<<< HEAD
                 return Json(fileCollection, JsonRequestBehavior.AllowGet);
             }
 
             var filePaths = Directory.EnumerateFiles(@pathString, "*" + keywords + "*", SearchOption.AllDirectories);
-=======
-                    var file = new File(fileInfo.Name, fileInfo.FullName, fileInfo.CreationTime);
->>>>>>> upstream/master
 
             foreach (string filePath in filePaths)
             {
@@ -80,7 +76,6 @@ namespace DirectoryBrowser.Controllers
         public string FilePath { get; set; }
         public string CreationTime { get; set; }
 
-<<<<<<< HEAD
         //public string Path 
         //{
         //    get
@@ -88,15 +83,7 @@ namespace DirectoryBrowser.Controllers
         //        return FilePath.Replace(WebConfigurationManager.AppSettings["directorypath"], "");
         //    }
         //}
-=======
-        public string Path 
-        {
-            get
-            {
-                return HttpUtility.UrlEncode(FilePath.Replace(WebConfigurationManager.AppSettings["directorypath"], ""));
-            }
-        }
->>>>>>> upstream/master
+
 
         public File(string name, string filePath, string creationTime)
         {
