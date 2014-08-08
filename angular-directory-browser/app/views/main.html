@@ -1,0 +1,49 @@
+<!--<div class="row marketing">-->
+<div class="row well">
+  <div class="col-lg-12">
+    <div class="input-group">
+      <input name="keywords" type="text" ng-model="keywords" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="submit" ng-click="Search()" onclick="$('#Searching_Modal').modal('show')"
+        onclick="$('#Searching_Modal').spin(modal)">Search</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+</br>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>File</th>
+    <th>Date Created</th>
+  </tr>
+  </thead>
+  <tbody ng-controller="MainCtrl">
+  <tr class="animate-repeat" ng-repeat="file in files">
+    <td><i class="fa fa-file"></i><a href="/DBService/download?file={{file.Name}}" download="{{file.Name}}">{{file.Name}}</a></td>
+    <td>{{file.CreationTime}}</td>
+  </tr>
+  </tbody>
+  </span>
+</table>
+<div id="Searching_Modal" class="modal fade" tabindex="-1" role="dialog" data-keyboard="false"
+         data-backdrop="static">
+         <script>
+           $.fn.spin = function(opts) {
+             this.each(function() {
+               var $this = $(this),
+                   data = $this.data();
+
+               if (data.spinner) {
+                 data.spinner.stop();
+                 delete data.spinner;
+               }
+               if (opts !== false) {
+                 data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+               }
+             });
+             return this;
+           };
+           $('#Searching_Modal').spin();
+         </script>
+</div>
